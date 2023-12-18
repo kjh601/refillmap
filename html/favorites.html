@@ -1,0 +1,138 @@
+<div id="search_bar">
+  <form action="#" id="search_form">
+    <!-- 검색 타입 라디오 버튼 -->
+    <div class="search_type_container">
+      <label style="background-color: #50806b">
+        <input
+          type="radio"
+          name="search_type"
+          onchange="updateStyle(this)"
+          value="store"
+          checked
+        /><span class=".text" style="color: white">매장</span>
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="search_type"
+          onchange="updateStyle(this)"
+          value="product"
+        /><span class=".text">상품</span>
+      </label>
+    </div>
+  </form>
+  <ul id="search_result">
+    <li>
+      <span class="store_name">매장명</span>
+      <img class="store_img" src="/img/store_image.png" />
+      <span class="store_address">주소명 : 경남 진주시 가좌길74번길 12</span>
+      <div class="bottom_button">
+        <button
+          class="route_button"
+          value="direction"
+          onclick="openNavigationPage()"
+        >
+          길찾기
+        </button>
+        <button
+          class="detail_button"
+          value="store_detail"
+          onclick="redirectToStoreDetailPage()"
+        >
+          상세 보기
+        </button>
+      </div>
+      <span class="distance_to_store">730m</span>
+    </li>
+    <li>
+      <span class="store_name">매장명</span>
+      <img class="store_img" src="/img/store_image.png" />
+      <span class="store_address">주소명 : 경남 진주시 가좌길74번길 12</span>
+      <div class="bottom_button">
+        <button
+          class="route_button"
+          value="direction"
+          onclick="openNavigationPage()"
+        >
+          길찾기
+        </button>
+        <button
+          class="detail_button"
+          value="store_detail"
+          onclick="redirectToStoreDetailPage()"
+        >
+          상세 보기
+        </button>
+      </div>
+      <span class="distance_to_store">730m</span>
+    </li>
+    <li>
+      <span class="store_name">매장명</span>
+      <img class="store_img" src="/img/store_image.png" />
+      <span class="store_address">주소명 : 경남 진주시 가좌길74번길 12</span>
+      <div class="bottom_button">
+        <button
+          class="route_button"
+          value="direction"
+          onclick="openNavigationPage()"
+        >
+          길찾기
+        </button>
+        <button
+          class="detail_button"
+          value="store_detail"
+          onclick="redirectToStoreDetailPage()"
+        >
+          상세 보기
+        </button>
+      </div>
+      <span class="distance_to_store">730m</span>
+    </li>
+    <li>
+      <span class="store_name">매장명</span>
+      <img class="store_img" src="/img/store_image.png" />
+      <span class="store_address">주소명 : 경남 진주시 가좌길74번길 12</span>
+      <div class="bottom_button">
+        <button
+          class="route_button"
+          value="direction"
+          onclick="openNavigationPage()"
+        >
+          길찾기
+        </button>
+        <button
+          class="detail_button"
+          value="store_detail"
+          onclick="redirectToStoreDetailPage()"
+        >
+          상세 보기
+        </button>
+      </div>
+      <span class="distance_to_store">730m</span>
+    </li>
+    <li>
+      <span class="store_name">매장명</span>
+      <img class="store_img" src="/img/store_image.png" />
+      <span class="store_address">주소명 : 경남 진주시 가좌길74번길 12</span>
+      <div class="bottom_button">
+        <button
+          class="route_button"
+          value="direction"
+          onclick="openNavigationPage()"
+        >
+          길찾기
+        </button>
+        <button
+          class="detail_button"
+          value="store_detail"
+          onclick="redirectToStoreDetailPage()"
+        >
+          상세 보기
+        </button>
+      </div>
+      <span class="distance_to_store">730m</span>
+    </li>
+  </ul>
+</div>
+<script src="/scripts/search.js"></script>
+<link rel="stylesheet" href="/css/search.css" />

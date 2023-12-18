@@ -1,0 +1,283 @@
+<div id="search_bar">
+  <form action="#" id="search_form">
+    <!-- 검색 타입 라디오 버튼 -->
+    <div class="search_type_container">
+      <label style="background-color: #50806b; color: white">
+        <input
+          type="radio"
+          name="search_type"
+          value="store"
+          checked
+          onchange="updateStyle(this)"
+        />
+        <span class=".text">매장</span>
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="search_type"
+          value="product"
+          onchange="updateStyle(this)"
+        />
+        <span class=".text">상품</span>
+      </label>
+    </div>
+
+    <!-- 검색어 입력창 -->
+    <div class="search_text_container">
+      <div class="content">
+        <img src="/img/search-icon.svg" />
+        <input type="text" placeholder="Search" />
+
+        <input type="text" style="display: none" />
+      </div>
+    </div>
+
+    <!-- 상세 검색, 펼치기, 숨기기 기능 추가 -->
+    <div class="search_detail">
+      <div class="disapear_button_container">
+        <button
+          type="button"
+          value="disapear"
+          onclick="toggleSearchOptions(event)"
+        >
+          <img src="../img/remove.svg" alt="" /><span class="text">숨기기</span>
+        </button>
+      </div>
+
+      <div class="search_option">
+        <!-- 상품 종류 카테고리, 체크박스 -->
+        <div class="product_type_container">
+          <label>
+            <input
+              type="checkbox"
+              name="product_type"
+              onchange="updateStyle(this)"
+            />
+
+            <span class="text">이미용품</span>
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="product_type"
+              onchange="updateStyle(this)"
+            />
+
+            <span class="text">가사용품</span>
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="product_type"
+              onchange="updateStyle(this)"
+            />
+
+            <span class="text">식료품</span>
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="product_type"
+              onchange="updateStyle(this)"
+            />
+
+            <span class="text">화장품</span>
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="product_type"
+              onchange="updateStyle(this)"
+            />
+
+            <span class="text">기타</span>
+          </label>
+        </div>
+
+        <!-- 매장 상태, 체크박스 -->
+        <div class="store_status_container">
+          <label>
+            <input
+              type="checkbox"
+              name="store_status"
+              onchange="updateStyle(this)"
+            />
+            <span class="text">영업 중</span>
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="store_status"
+              onchange="updateStyle(this)"
+            />
+            <span class="text">탄소포인트 참여</span>
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="store_status"
+              onchange="updateStyle(this)"
+            />
+            <span class="text">개인용기</span>
+          </label>
+        </div>
+
+        <!-- 지역 검색 -->
+        <div class="local_search_container">
+          <!-- 시/도 드롭박스 -->
+          <select name="city" id="city">
+            <option value="default">시/도</option>
+            <option value="seoul">서울특별시</option>
+            <option value="busan">부산광역시</option>
+            <option value="jeju">제주특별자치도</option>
+            <!-- 여기에 더 많은 시/도를 추가하세요 -->
+          </select>
+
+          <!-- 시/군/구 드롭박스 -->
+          <select name="district" id="district">
+            <option value="default">시/군/구</option>
+            <option value="gangnam">강남구</option>
+            <option value="suyeong">수영구</option>
+            <option value="jejuCity">제주시</option>
+            <!-- 여기에 더 많은 시/군/구를 추가하세요 -->
+          </select>
+
+          <!-- 읍/면/동 드롭박스 -->
+          <select name="town" id="town">
+            <option value="default">읍/면/동</option>
+            <option value="sinsa">신사동</option>
+            <option value="gwangan">광안동</option>
+            <option value="aewol">애월읍</option>
+            <!-- 여기에 더 많은 읍/면/동을 추가하세요 -->
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- 정렬 기준 드롭박스 -->
+    <select name="sort_type" id="sort_type">
+      <option value="by_popular">인기순</option>
+      <option value="by_update">업데이트순</option>
+      <option value="by_name">이름순</option>
+      <option value="by_distance">거리순</option>
+    </select>
+
+    <!-- 제출 버튼, 나중에 감춰서 엔터 누르면 눌러지도록 만들거임 -->
+    <input id="submit_button" type="submit" value="Submit" />
+  </form>
+  <ul id="search_result">
+    <li onclick="openOverlay()">
+      <span class="store_name">매장명</span>
+      <img class="store_img" src="/img/store_image.png" />
+      <span class="store_address">주소명 : 경남 진주시 가좌길74번길 12</span>
+      <div class="bottom_button">
+        <button
+          class="route_button"
+          value="direction"
+          onclick="openNavigationPage()"
+        >
+          길찾기
+        </button>
+        <button
+          class="detail_button"
+          value="store_detail"
+          onclick="redirectToStoreDetailPage()"
+        >
+          상세 보기
+        </button>
+      </div>
+      <span class="distance_to_store">730m</span>
+    </li>
+    <li onclick="openOverlay()">
+      <span class="store_name">매장명</span>
+      <img class="store_img" src="/img/store_image.png" />
+      <span class="store_address">주소명 : 경남 진주시 가좌길74번길 12</span>
+      <div class="bottom_button">
+        <button
+          class="route_button"
+          value="direction"
+          onclick="openNavigationPage()"
+        >
+          길찾기
+        </button>
+        <button
+          class="detail_button"
+          value="store_detail"
+          onclick="redirectToStoreDetailPage()"
+        >
+          상세 보기
+        </button>
+      </div>
+      <span class="distance_to_store">730m</span>
+    </li>
+    <li onclick="openOverlay()">
+      <span class="store_name">매장명</span>
+      <img class="store_img" src="/img/store_image.png" />
+      <span class="store_address">주소명 : 경남 진주시 가좌길74번길 12</span>
+      <div class="bottom_button">
+        <button
+          class="route_button"
+          value="direction"
+          onclick="openNavigationPage()"
+        >
+          길찾기
+        </button>
+        <button
+          class="detail_button"
+          value="store_detail"
+          onclick="redirectToStoreDetailPage()"
+        >
+          상세 보기
+        </button>
+      </div>
+      <span class="distance_to_store">730m</span>
+    </li>
+    <li onclick="openOverlay()">
+      <span class="store_name">매장명</span>
+      <img class="store_img" src="/img/store_image.png" />
+      <span class="store_address">주소명 : 경남 진주시 가좌길74번길 12</span>
+      <div class="bottom_button">
+        <button
+          class="route_button"
+          value="direction"
+          onclick="openNavigationPage()"
+        >
+          길찾기
+        </button>
+        <button
+          class="detail_button"
+          value="store_detail"
+          onclick="redirectToStoreDetailPage()"
+        >
+          상세 보기
+        </button>
+      </div>
+      <span class="distance_to_store">730m</span>
+    </li>
+    <li onclick="openOverlay()">
+      <span class="store_name">매장명</span>
+      <img class="store_img" src="/img/store_image.png" />
+      <span class="store_address">주소명 : 경남 진주시 가좌길74번길 12</span>
+      <div class="bottom_button">
+        <button
+          class="route_button"
+          value="direction"
+          onclick="openNavigationPage()"
+        >
+          길찾기
+        </button>
+        <button
+          class="detail_button"
+          value="store_detail"
+          onclick="redirectToStoreDetailPage()"
+        >
+          상세 보기
+        </button>
+      </div>
+      <span class="distance_to_store">730m</span>
+    </li>
+  </ul>
+</div>
+<script src="/scripts/search.js"></script>
+<link rel="stylesheet" href="/css/search.css" />

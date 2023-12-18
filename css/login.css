@@ -1,0 +1,231 @@
+#login_form {
+  display: flex;
+  width: 383.2px;
+  height: 408.8px;
+  padding: 19.2px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+  margin-left: 64px;
+
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0px 0px 10.4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#login_form > .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #000;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#login_form > .content {
+  width: 344.8px;
+  height: 260px;
+  flex-shrink: 0;
+}
+
+#login_form > .content > .input_text {
+  display: flex;
+  flex-direction: column;
+  width: 344.8px;
+  height: 143px;
+  flex-shrink: 0;
+  gap: 36px;
+}
+
+#login_form > .content > .input_text > .email {
+  display: flex;
+  width: 343.2px;
+  height: 54px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  flex-shrink: 0;
+
+  border-bottom: 1px solid black;
+}
+
+#login_form > .content > .input_text > .email > .description {
+  color: #999;
+  font-family: Poppins;
+  font-size: 10.4px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+#login_form > .content > .input_text > .email > label {
+  width: 342.6px;
+  height: 29px;
+  flex-shrink: 0;
+}
+
+#login_form > .content > .input_text > .email > label > img {
+  width: 13.6px;
+  height: 13.6px;
+  flex-shrink: 0;
+
+  vertical-align: middle;
+}
+
+#login_form > .content > .input_text > .email > label > input {
+  width: 320px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+
+#login_form > .content > .input_text > .password {
+  display: flex;
+  width: 343.2px;
+  height: 54px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  flex-shrink: 0;
+
+  border-bottom: 1px solid black;
+}
+
+#login_form > .content > .input_text > .password > .description {
+  color: #999;
+  font-family: Poppins;
+  font-size: 10.4px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+#login_form > .content > .input_text > .password > label {
+  width: 342.6px;
+  height: 29px;
+  flex-shrink: 0;
+}
+
+#login_form > .content > .input_text > .password > label > img {
+  width: 13.6px;
+  height: 13.6px;
+  flex-shrink: 0;
+
+  vertical-align: middle;
+}
+
+#login_form > .content > .input_text > .password > label > input {
+  width: 320px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+
+#login_form > .content > .login_addon {
+  display: flex;
+  width: 343px;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+#login_form > .content > .login_addon > .autologin {
+  display: flex;
+  width: 71.196px;
+  padding-right: 0px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+  flex-shrink: 0;
+
+  color: #000;
+  font-family: Poppins;
+  font-size: 9.6px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+#login_form > .content > .login_addon > div {
+  display: flex;
+  height: 14.323px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6.702px;
+}
+
+#login_form > .content > .login_addon a {
+  color: #4d4d4d;
+  font-family: Poppins;
+  font-size: 9.6px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+#login_form > .content > .login_button {
+  width: 343.2px;
+  height: 42.4px;
+  flex-shrink: 0;
+
+  position: relative;
+  top: 48px;
+
+  border: none;
+  border-radius: 25.6px;
+  background: #50806b;
+  box-shadow: 0px 3.2px 20.8px 0px rgba(0, 0, 0, 0.25);
+
+  color: #fff;
+  font-family: Poppins;
+  font-size: 13.6px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+#login_form > .content > .login_button:hover,
+.sns_list > li:hover {
+  filter: brightness(0.85);
+}
+
+#login_form > .content > .login_button:active,
+.sns_list > li:active {
+  filter: brightness(1);
+}
+
+.sns {
+  width: 280px;
+  height: 72.2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.sns > .title {
+  color: #b5b5b5;
+  font-family: Poppins;
+  font-size: 12.8px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.sns > .sns_list {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.sns > .sns_list > li > img {
+  width: 43.2px;
+  height: 43.2px;
+}

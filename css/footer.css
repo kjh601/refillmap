@@ -1,0 +1,63 @@
+footer {
+  display: flex;
+  padding: 12.8px 0px;
+  padding-left: 64px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12.8px;
+
+  background: #50806b;
+}
+
+footer > .menu {
+  width: 374.2px;
+  height: 33px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+  padding: 10px;
+
+  color: #fff;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+footer > .menu li {
+  position: relative; /* 가상 요소의 위치 기준 */
+  margin-right: 15px; /* 오른쪽에 마진 추가 */
+}
+
+footer > .menu li::after {
+  content: "|"; /* 구분선 내용 */
+  position: absolute; /* 부모 요소(li)에 상대적인 위치 */
+  right: -20px; /* 오른쪽 마진의 절반만큼 왼쪽으로 이동 */
+  top: 50%; /* 수직 중앙에 위치 */
+  transform: translateY(-50%); /* 수직 중앙 정렬 */
+}
+
+footer > .menu li:last-child {
+  margin-right: 0; /* 마지막 항목의 마진 제거 */
+}
+
+footer > .menu li:last-child::after {
+  content: none; /* 마지막 항목에는 구분선 표시 안 함 */
+}
+
+footer > span {
+  width: 376px;
+
+  color: #fff;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

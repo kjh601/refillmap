@@ -1,0 +1,444 @@
+#search_result > li > .bottom_button > button {
+  border: 0;
+  background-color: transparent;
+}
+
+#search_bar {
+  box-sizing: border-box;
+  display: flex;
+  width: 451px;
+  padding: 24px 24px 0px 24px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  border-right: 1px solid var(--gray-shades-light-gray-2, #efefef);
+  background: var(--neutral-white, #fff);
+
+  z-index: 2;
+}
+
+#search_form {
+  box-sizing: border-box;
+  display: flex;
+  padding-bottom: 0px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  align-self: stretch;
+
+  background: #fff;
+}
+
+.search_type_container {
+  display: flex;
+  width: 403px;
+  height: 64px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.search_type_container label {
+  box-sizing: border-box;
+  display: flex;
+  width: 201.5px;
+  height: 64px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+
+  background: #fff;
+}
+
+.search_type_container input {
+  display: none;
+}
+
+.search_type_container .text {
+  color: #000;
+  font-family: "ABeeZee";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 133.333% */
+  letter-spacing: 0.72px;
+}
+
+.search_text_container {
+  box-sizing: border-box;
+  display: flex;
+  width: 403px;
+  height: 48px;
+  padding: 0px 16px;
+  align-items: flex-start;
+  flex-shrink: 0;
+
+  border-radius: 12px;
+  border: 1px solid #c0c8d1;
+}
+
+.search_text_container .content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.search_text_container .content img {
+  width: 24px;
+  height: 24px;
+  filter: invert(94%) sepia(2%) saturate(1418%) hue-rotate(182deg)
+    brightness(89%) contrast(81%);
+}
+
+.search_text_container .content input {
+  display: flex;
+  height: 24px;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 0;
+
+  overflow: hidden;
+  color: black; /* 입력된 텍스트의 색상을 검은색으로 변경 */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+
+  border: none;
+  outline: none;
+}
+
+.search_text_container .content input::placeholder {
+  color: #c0c8d1; /* placeholder 색상 변경 */
+}
+
+.search_detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  background: #fff;
+}
+
+.disapear_button_container {
+  display: flex;
+  width: 403px;
+  align-items: center;
+
+  background: #fff;
+}
+
+.disapear_button_container > button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.disapear_button_container img {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.disapear_button_container .text {
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 200% */
+}
+
+.search_option {
+  display: flex;
+  width: 403px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  border: 1px solid #a9a9a9;
+}
+
+.product_type_container {
+  box-sizing: border-box;
+  display: flex;
+  width: 403px;
+  height: 52px;
+  padding: 8px 16px;
+  align-items: flex-start;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.product_type_container label {
+  box-sizing: border-box;
+  display: flex;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  align-self: stretch;
+
+  border-radius: 20px;
+  border: 1px solid #a9a9a9;
+  background: #fff;
+}
+
+.product_type_container input {
+  display: none;
+}
+
+.product_type_container .text {
+  color: #000;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Open Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 12px */
+}
+
+.store_status_container {
+  box-sizing: border-box;
+  display: flex;
+  padding: 8px 16px;
+  align-items: center;
+  gap: 8px;
+}
+
+.store_status_container label {
+  box-sizing: border-box;
+  display: flex;
+  width: 118px;
+  height: 36px;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 20px;
+  border: 1px solid #a9a9a9;
+  background: #fff;
+}
+
+.store_status_container input {
+  display: none;
+}
+
+.store_status_container .text {
+  color: #000;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Open Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 12px */
+}
+
+.local_search_container {
+  box-sizing: border-box;
+  display: flex;
+  width: 403px;
+  padding: 8px 16px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.local_search_container select {
+  width: 118px;
+  height: 36px;
+  flex-shrink: 0;
+
+  border: 1px solid #a9a9a9;
+  background: #fff;
+
+  text-align: center;
+
+  color: #000;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 12px */
+}
+
+#sort_type {
+  box-sizing: border-box;
+  display: flex;
+  width: 138px;
+  padding: 5px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#submit_button {
+  display: none;
+}
+
+#search_result {
+  box-sizing: border-box;
+  display: flex;
+  width: 403px;
+  padding: 0px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#search_result > li {
+  width: 403px;
+  height: 170px;
+
+  border-bottom: 1px solid rgba(169, 169, 169, 0.66);
+  background: #fff;
+
+  position: relative;
+}
+
+.store_name {
+  width: 256px;
+  color: #000;
+  font-family: Open Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  position: absolute;
+  top: 29px;
+  left: 20px;
+}
+
+.store_img {
+  width: 87px;
+  height: 87px;
+  flex-shrink: 0;
+
+  position: absolute;
+  top: 16px;
+  left: 296px;
+}
+
+#search_result > li > .store_address {
+  width: 256px;
+
+  color: #000;
+  font-family: Open Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  position: absolute;
+  top: 84px;
+  left: 20px;
+}
+
+#search_result > li > .bottom_button {
+  display: flex;
+  width: 158px;
+  align-items: center;
+  gap: 10px;
+
+  position: absolute;
+  top: 118px;
+  left: 20px;
+}
+
+#search_result > li > .bottom_button > .route_button {
+  box-sizing: border-box;
+  display: flex;
+  width: 74px;
+  height: 30px;
+  padding: 8px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+
+  border-radius: 6px;
+  border: 1px solid var(--neutralsborder, #b6c2e2);
+  background: #fff;
+
+  color: var(--neutralstexttertiary, #445275);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* COMPONENT/BODY-SEMIBOLD */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 14px */
+}
+
+#search_result > li > .bottom_button > .detail_button {
+  box-sizing: border-box;
+  display: flex;
+  width: 74px;
+  height: 30px;
+  padding: 8px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+
+  border-radius: 6px;
+  background: #50806b;
+
+  color: #fff;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* COMPONENT/BODY-SEMIBOLD */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 14px */
+}
+
+.distance_to_store {
+  display: flex;
+  width: 59px;
+  height: 11px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+
+  color: #000;
+  text-align: right;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 14px */
+
+  position: absolute;
+  top: 139px;
+  left: 324px;
+}
+
+#search_result > li:hover {
+  filter: brightness(0.98);
+}
+
+#search_result > li:active {
+  filter: brightness(1);
+}

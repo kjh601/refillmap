@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>프로필 수정</title>
+
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/edit_profile.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <style>
+      section {
+        background-image: url("/img/background.png");
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* 전체 화면 높이 */
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <div class="top">
+        <div class="logo_container">
+          <img src="../img/logo.svg" alt="logo SVG" />
+          <h1 class="text">리필맵</h1>
+        </div>
+        <ul class="menu_list">
+          <li class="contract">
+            <a href="#"
+              ><img src="../img/nav-arrow-left.svg" /><span>줄이기</span></a
+            >
+          </li>
+          <li class="homepage">
+            <a href="#"
+              ><img src="../img/home-icon.svg" /><span>홈화면</span></a
+            >
+          </li>
+          <li class="search">
+            <a href="#"
+              ><img src="../img/search-icon.svg" /><span>검색하기</span></a
+            >
+          </li>
+          <li class="notification">
+            <a href="#"
+              ><img src="../img/notification-icon.svg" /><span
+                >알림 확인</span
+              ></a
+            >
+          </li>
+          <li class="favorites">
+            <a href="#"
+              ><img src="../img/favorites-icon.svg" /><span>즐겨찾기</span></a
+            >
+          </li>
+          <li class="mypage">
+            <a href="#"
+              ><img src="../img/mypage-icon.svg" /><span>마이페이지</span></a
+            >
+          </li>
+          <li class="support">
+            <a href="#"
+              ><img src="../img/support-icon.svg" /><span>지원센터</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <ul class="menu_list">
+          <li class="profile">
+            <img src="../img/profile-avatar.png" />
+            <span class="nickname">닉네임</span>
+          </li>
+          <li class="logout">
+            <a href="#"
+              ><img src="../img/logout-icon.svg" /><span>Logout</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section>
+      <article id="edit_profile">
+        <div class="header">프로필 설정</div>
+        <div class="edit_profile_image">
+          <img src="/img/avatar.png" />
+          <div class="file-upload-container">
+            <div class="file-upload-option">
+              <label>
+                <input type="radio" name="uploadOption" checked /> 기존 프로필
+                이미지
+              </label>
+            </div>
+            <div class="file-upload-option">
+              <label>
+                <input type="radio" name="uploadOption" /> 기본 이미지로 변경
+              </label>
+            </div>
+            <div class="file-upload-option last-option">
+              <label>
+                <input type="radio" name="uploadOption" /> 사진 불러오기
+                (jpg,png)
+              </label>
+              <div class="upload-image">
+                <input type="text" readonly />
+                <button class="upload-btn">변경하기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="edit_nickname">
+          <div class="title">닉네임</div>
+          <input type="text" />
+        </div>
+        <button class="save" onclick="redirectToMypage()">저장</button>
+      </article>
+    </section>
+    <footer>
+      <ul class="menu">
+        <li><a href="homepage.html">홈화면</a></li>
+        <li><a href="mypage.html">이용약관</a></li>
+        <li><a href="FAQ.html">문의하기</a></li>
+        <li><a href="https://github.com/kjh601" target="_blank">깃허브</a></li>
+      </ul>
+      <span>© 2023 리필스테이션 | Powered by 리필스테이션</span>
+    </footer>
+    <script src="/scripts/header.js"></script>
+    <script src="/scripts/edit_profile.js"></script>
+  </body>
+</html>

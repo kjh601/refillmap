@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마이페이지</title>
+
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/mypage.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <style>
+      section {
+        background-image: url("/img/background.png");
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* 전체 화면 높이 */
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <div class="top">
+        <div class="logo_container">
+          <img src="../img/logo.svg" alt="logo SVG" />
+          <h1 class="text">리필맵</h1>
+        </div>
+        <ul class="menu_list">
+          <li class="contract">
+            <a href="#"
+              ><img src="../img/nav-arrow-left.svg" /><span>줄이기</span></a
+            >
+          </li>
+          <li class="homepage">
+            <a href="#"
+              ><img src="../img/home-icon.svg" /><span>홈화면</span></a
+            >
+          </li>
+          <li class="search">
+            <a href="#"
+              ><img src="../img/search-icon.svg" /><span>검색하기</span></a
+            >
+          </li>
+          <li class="notification">
+            <a href="#"
+              ><img src="../img/notification-icon.svg" /><span
+                >알림 확인</span
+              ></a
+            >
+          </li>
+          <li class="favorites">
+            <a href="#"
+              ><img src="../img/favorites-icon.svg" /><span>즐겨찾기</span></a
+            >
+          </li>
+          <li class="mypage">
+            <a href="#"
+              ><img src="../img/mypage-icon.svg" /><span>마이페이지</span></a
+            >
+          </li>
+          <li class="support">
+            <a href="#"
+              ><img src="../img/support-icon.svg" /><span>지원센터</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <ul class="menu_list">
+          <li class="profile">
+            <img src="../img/profile-avatar.png" />
+            <span class="nickname">닉네임</span>
+          </li>
+          <li class="logout">
+            <a href="#"
+              ><img src="../img/logout-icon.svg" /><span>Logout</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section>
+      <article id="mypage">
+        <div class="header">마이페이지</div>
+        <div class="profile">
+          <div class="image">
+            <img src="/img/avatar.png" />
+            <div class="welcome_message">
+              <span class="nickname">김지환</span>님<br />
+              안녕하세요!
+            </div>
+          </div>
+          <div class="account">
+            <button class="edit_profile" onclick="redirectToEditProfile()">
+              프로필 수정
+            </button>
+            <button class="logout" onclick="redirectToLogin()">로그아웃</button>
+          </div>
+        </div>
+        <ul class="information_use">
+          <li class="title">이용안내</li>
+          <li><a href="FAQ.html">문의하기</a></li>
+          <li><a href="myquestion.html">문의 내역 확인</a></li>
+          <li><a href="privacy_policy.html">개인정보 처리 방침</a></li>
+          <li><a href="terms_of_service.html">서비스 이용약관</a></li>
+        </ul>
+        <ul class="etc_menu">
+          <li class="title">기타</li>
+          <li><a href="setting_alarm.html">알림 설정</a></li>
+          <li><a href="updatepassword.html">비밀번호 변경</a></li>
+          <li><a href="#" onclick="showModal()">회원 탈퇴</a></li>
+        </ul>
+        <div id="deleteConfirmModal" class="modal">
+          <div class="modal-content">
+            <div class="header">정말 탈퇴하시겠습니까?</div>
+            <div class="content">
+              탈퇴 버튼 선택 시, 계정은 삭제되며 복구되지 않습니다.
+            </div>
+            <button id="confirmDelete" onclick="confirmDelete()">탈퇴</button>
+            <button id="cancelDelete" onclick="closeModal()">취소</button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <footer>
+      <ul class="menu">
+        <li><a href="homepage.html">홈화면</a></li>
+        <li><a href="mypage.html">이용약관</a></li>
+        <li><a href="FAQ.html">문의하기</a></li>
+        <li><a href="https://github.com/kjh601" target="_blank">깃허브</a></li>
+      </ul>
+      <span>© 2023 리필스테이션 | Powered by 리필스테이션</span>
+    </footer>
+    <script src="/scripts/header.js"></script>
+    <script src="/scripts/mypage.js"></script>
+  </body>
+</html>

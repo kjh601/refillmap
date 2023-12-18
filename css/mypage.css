@@ -1,0 +1,295 @@
+#mypage {
+  margin-left: 64px;
+  box-sizing: border-box;
+  display: inline-flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+
+  border-radius: 12px;
+  border: 0.8px solid #ededed;
+  background: #fff;
+  box-shadow: 0px 0px 3.2px 0px rgba(0, 0, 0, 0.25);
+}
+
+#mypage > .header {
+  display: flex;
+  width: 440px;
+  height: 64px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  color: #292929;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 100% */
+  letter-spacing: -0.4px;
+}
+
+#mypage > .profile {
+  display: flex;
+  width: 416.8px;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 6.4px;
+  background: #fff;
+}
+
+#mypage > .profile > .image {
+  display: flex;
+  width: 265.6px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+#mypage > .profile > .image > img {
+  display: flex;
+  width: 120px;
+  height: 120px;
+  align-items: center;
+  gap: 9.6px;
+  flex-shrink: 0;
+
+  border-radius: 12.8px;
+}
+
+#mypage > .profile > .image > .welcom_message {
+  display: flex;
+  width: 116.8px;
+  height: 68px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+#mypage > .profile > .image > .welcome_message {
+  color: #000;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+#mypage > .profile > .image > .welcome_message > .nickname {
+  color: #000;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#mypage > .profile > .account {
+  display: flex;
+  width: 93.6px;
+  height: 65.6px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6.4px;
+  flex-shrink: 0;
+}
+
+#mypage > .profile > .account > .edit_profile {
+  border: none;
+  background: #50806b;
+  color: #fff;
+}
+
+#mypage > .profile > .account > .logout {
+  border: 0.8px solid #f00;
+  background: #fff;
+  color: #f00;
+}
+
+#mypage > .profile > .account > button {
+  outline: none;
+  box-sizing: border-box;
+  display: flex;
+  width: 93.6px;
+  height: 29.6px;
+  padding: 8.8px 9.2px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  box-shadow: 0px 1.6px 3.2px 0px rgba(0, 0, 0, 0.25);
+  font-family: Poppins;
+  font-size: 12.8px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+#mypage > .profile > .account > button:hover {
+  filter: brightness(0.9);
+}
+#mypage > .profile > .account > button:active {
+  filter: brightness(1);
+}
+
+#mypage > ul {
+  display: flex;
+  width: 441.6px;
+  padding: 8.8px 10.4px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+
+  border-radius: 6.4px;
+  border: 0.8px solid #8c8c8c;
+  background: #fff;
+}
+
+#mypage > ul > .title {
+  width: 118.049px;
+  height: 17.6px;
+
+  color: #000;
+  font-family: Roboto;
+  font-size: 14.4px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#mypage > ul > li > a {
+  width: 194.512px;
+  height: 17.6px;
+
+  color: #000;
+  font-family: Roboto;
+  font-size: 12.8px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  display: inline-flex;
+  padding: 19.2px 25.6px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 12px;
+  background: #fff;
+}
+.modal-content > .header {
+  color: #000;
+  font-family: Inter;
+  font-size: 19.2px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.modal-content > .content {
+  width: 200px;
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#confirmDelete {
+  outline: none;
+  border: none;
+  display: flex;
+  width: 152px;
+  height: 29.6px;
+  padding: 8.8px 19.2px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: 12px;
+  background: #f00;
+  box-shadow: 0px 0.8px 3.2px 0px rgba(0, 0, 0, 0.25);
+
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+#confirmDelete:hover {
+  filter: brightness(0.9);
+}
+#confirmDelete:active {
+  filter: brightness(1);
+}
+#cancelDelete {
+  border: none;
+  outline: none;
+  display: flex;
+  width: 152px;
+  height: 29.6px;
+  padding: 8.8px 19.2px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 0.8px 4px 0px rgba(0, 0, 0, 0.25);
+
+  color: #000;
+  font-family: Poppins;
+  font-size: 12.8px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+#cancelDelete:hover {
+  filter: brightness(0.9);
+}
+#cancelDelete:active {
+  filter: brightness(1);
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

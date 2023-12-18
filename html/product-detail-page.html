@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상품상세페이지</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/product-detail-page.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="top">
+        <div class="logo_container">
+          <img src="../img/logo.svg" alt="logo SVG" />
+          <h1 class="text">리필맵</h1>
+        </div>
+        <ul class="menu_list">
+          <li class="contract">
+            <a href="#"
+              ><img src="../img/nav-arrow-left.svg" /><span>줄이기</span></a
+            >
+          </li>
+          <li class="homepage">
+            <a href="#"
+              ><img src="../img/home-icon.svg" /><span>홈화면</span></a
+            >
+          </li>
+          <li class="search">
+            <a href="#"
+              ><img src="../img/search-icon.svg" /><span>검색하기</span></a
+            >
+          </li>
+          <li class="notification">
+            <a href="#"
+              ><img src="../img/notification-icon.svg" /><span
+                >알림 확인</span
+              ></a
+            >
+          </li>
+          <li class="favorites">
+            <a href="#"
+              ><img src="../img/favorites-icon.svg" /><span>즐겨찾기</span></a
+            >
+          </li>
+          <li class="mypage">
+            <a href="#"
+              ><img src="../img/mypage-icon.svg" /><span>마이페이지</span></a
+            >
+          </li>
+          <li class="support">
+            <a href="#"
+              ><img src="../img/support-icon.svg" /><span>지원센터</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <ul class="menu_list">
+          <li class="profile">
+            <img src="../img/profile-avatar.png" />
+            <span class="nickname">닉네임</span>
+          </li>
+          <li class="logout">
+            <a href="#"
+              ><img src="../img/logout-icon.svg" /><span>Logout</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section class="product_detail_page">
+      <article class="title">
+        <span class="text">지구샵X민달팽이주택협동조합 독산역점</span>
+        <button class="favorite_button" onclick="toggleFavorite(this)">
+          <img src="../img/star_outline.svg" />
+        </button>
+      </article>
+      <article class="product_info">
+        <img class="product_image" src="../img/treatment_oil.png" />
+        <div class="detail_info">
+          <div class="product_title">
+            <span class="text">트리트먼트 오일</span>
+            <button class="favorite_button" onclick="toggleFavorite(this)">
+              <img src="../img/star_outline.svg" />
+            </button>
+          </div>
+          <div class="product_cost">12,000원/100ml</div>
+          <div class="introduction">
+            우리는 단순한 매장을 넘어서, 고객 여러분의 일상에 새로운 가치와
+            편리함을 제공하려 노력하는 공간입니다. 당신의 각종 필요와 요구를
+            충족시켜 줄 특별한 제품들, 그리고 그 아래 숨겨진 우리의 철학이 함께
+            담겨 있습니다.
+          </div>
+          <ul class="etc_info">
+            <li>제조일자 : 2023-04-28</li>
+            <li>사용기한 : 2023-10-28</li>
+            <li>책임판매업자 : 꽃마리 협동조합</li>
+            <li>제조업자 : 꽃마리 협동조합</li>
+            <li>맞춤판매업자 : 바오로 가게</li>
+          </ul>
+          <button class="return_store" onclick="redirectToStoreDetailPage()">
+            매장으로 돌아가기
+          </button>
+        </div>
+      </article>
+      <article class="ingredients">
+        <span class="title">전성분</span>
+        <p>
+          포타슘코코에이트(제주산), 정제수, 라우릴글루코사이드, 베이킹소다,
+          로즈마리 추출물(제주산), 황금추출물, 라임오일, 레몬오일,
+          티트리오일(제주산), 오렌지오일, 레몬그라스오일(제주산), 리날룰,
+          리모넨(식물에서 추출한 아로마오일에 함유된 성분) 코코넛오일과
+          포타슘하이드록사이드의 비누화반응으로 만들어진 순비누로서, 꽃마리에서
+          직접 생상합니다
+        </p>
+      </article>
+      <article class="caution">
+        <span class="title">주의사항</span>
+        <p>
+          1. 식물유래 성분이 함유된 제품으로, 고온이나 직사 광선을 피해 보관
+          하시기 바랍니다. 2. 식물 성분으로 0도 이하 보관시에는 뿌옇게 동결될 수
+          있으나 품질 에는 이상이 없으니 안심하고 사용하십시오. 3. 어린이의 손이
+          닿지 않는 곳에 보관하십시오. 용도 이외 또는 사용하지 마십시오. 4. 만일
+          마셨을 경우에는 토하거나 의사의 지시를 받으십시오. 5. 눈에 들어갔을
+          경우에는 물로 잘 씻어 내십시오. 6. 본 제품은 공정거래 위원회 고시
+          소비자분쟁해결 기준에 의거 보상 받을 수 있습니다.
+        </p>
+      </article>
+    </section>
+    <footer>
+      <ul class="menu">
+        <li><a href="homepage.html">홈화면</a></li>
+        <li><a href="mypage.html">이용약관</a></li>
+        <li><a href="FAQ.html">문의하기</a></li>
+        <li><a href="https://github.com/kjh601" target="_blank">깃허브</a></li>
+      </ul>
+      <span>© 2023 리필스테이션 | Powered by 리필스테이션</span>
+    </footer>
+    <script src="/scripts/product-detail-page.js"></script>
+    <script src="../scripts/header.js"></script>
+  </body>
+</html>

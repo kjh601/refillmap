@@ -1,0 +1,122 @@
+#setting_alarm {
+  display: inline-flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+
+  border-radius: 12px;
+  border: 0.8px solid #ededed;
+  background: #fff;
+  box-shadow: 0px 0px 3.2px 0px rgba(0, 0, 0, 0.25);
+}
+
+#setting_alarm > .header {
+  display: flex;
+  align-items: end;
+  align-self: stretch;
+  gap: 45px;
+}
+#setting_alarm > .header > a {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+#setting_alarm > .header > a > img {
+  width: 16px;
+  height: 16px;
+}
+
+#setting_alarm > .header > span {
+  color: #292929;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 100% */
+  letter-spacing: -0.4px;
+}
+
+#setting_alarm > .alarm_type {
+  display: flex;
+  width: 200px;
+  padding: 8.8px 10.4px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+
+  border-radius: 6.4px;
+  border: 0.8px solid #8c8c8c;
+  background: #fff;
+}
+label > span {
+  color: #010101;
+  font-family: Rubik;
+  font-size: 14.4px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+label {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+[type="checkbox"] {
+  appearance: none;
+  position: relative;
+  border: max(2px, 0.1em) solid gray;
+  border-radius: 1.25em;
+  width: 2.25em;
+  height: 1.25em;
+}
+
+[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  transform: scale(0.8);
+  background-color: gray;
+  transition: left 250ms linear;
+}
+
+[type="checkbox"]:checked {
+  background-color: #50806b;
+  border-color: #50806b;
+}
+
+[type="checkbox"]:checked::before {
+  background-color: white;
+  left: 1em;
+}
+
+[type="checkbox"]:disabled {
+  border-color: lightgray;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+[type="checkbox"]:disabled:before {
+  background-color: lightgray;
+}
+
+[type="checkbox"]:disabled + span {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+[type="checkbox"]:focus-visible {
+  outline-offset: max(2px, 0.1em);
+  outline: max(2px, 0.1em) solid #50806b;
+}
+
+[type="checkbox"]:enabled:hover {
+  box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+}

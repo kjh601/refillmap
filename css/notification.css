@@ -1,0 +1,150 @@
+.hidden {
+  display: none;
+}
+
+#notification_bar {
+  height: 100%;
+  background-color: white;
+}
+
+#notification_bar > ul {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px 0px 24px;
+  align-items: flex-start;
+  gap: 10px;
+
+  border-right: 1px solid var(--gray-shades-light-gray-2, #efefef);
+  background: var(--neutral-white, #fff);
+}
+
+.notification_container {
+  display: flex;
+  width: 393px;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0px 1.33px 0.66px 0px rgba(0, 0, 0, 0.12),
+    0px 0px 0.66px 0px rgba(0, 0, 0, 0.21);
+}
+
+.notification_icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.content {
+  display: flex;
+  width: 292px;
+  padding: 0px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  flex-shrink: 0;
+
+  background: #fff;
+}
+
+.detail_toggle_button {
+  outline: none;
+  border: none;
+  background-color: white;
+}
+
+.detail_toggle_button img:hover {
+  filter: brightness(90%);
+}
+
+.detail_toggle_button img:active {
+  filter: brightness(100%);
+}
+
+.info_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+
+  background: #fff;
+}
+
+.notification_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+
+  color: #212121;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.1px;
+}
+
+.notification_content {
+  align-self: stretch;
+
+  color: #212121;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 112.5% */
+  letter-spacing: 0.2px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.notification_type {
+  display: flex;
+  align-items: center;
+
+  color: #45464f;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.notification_date {
+  display: flex;
+  align-items: center;
+
+  color: #45464f;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.links .delete {
+  color: #4f5a99;
+  font-family: "Roboto";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.199px;
+}
+
+.links .move {
+  color: #4f5a99;
+  font-family: "Roboto";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.199px;
+}

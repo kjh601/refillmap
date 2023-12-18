@@ -1,0 +1,362 @@
+<link rel="stylesheet" href="/css/normalize.css" />
+<link rel="stylesheet" href="/css/notification.css" />
+
+<div id="notification_bar">
+  <ul>
+    <li class="store_product_notification notification_container">
+      <img
+        class="notification_icon"
+        src="/img/store_product_notification_icon.svg"
+      />
+      <div class="content">
+        <div class="info_box">
+          <span class="notification_type">매장 및 상품 알림</span>
+          <span class="notification_date">2023.12.02 14:22</span>
+        </div>
+        <div class="notification_title">제목</div>
+        <p class="notification_content hidden">
+          상세 내용 .... <br /><br /><br /><br />
+        </p>
+        <div class="links">
+          <a href="#" class="delete" onclick="deleteNotification(event)">
+            삭제
+          </a>
+          <a href="#" class="move" onclick="redirectToStoreDetailPage()">
+            바로가기
+          </a>
+        </div>
+      </div>
+      <button class="detail_toggle_button" onclick="toggleDetail(event)">
+        <img src="/img/expand_detail.svg" />
+      </button>
+    </li>
+    <li class="support_notification notification_container">
+      <img class="notification_icon" src="/img/support_notification_icon.svg" />
+      <div class="content">
+        <div class="info_box">
+          <span class="notification_type">사용자 지원 알림</span>
+          <span class="notification_date">2023.12.02 14:22</span>
+        </div>
+        <div class="notification_title">제목</div>
+        <p class="notification_content hidden">
+          상세 내용 .... <br /><br /><br /><br />
+        </p>
+        <div class="links">
+          <a href="#" class="delete" onclick="deleteNotification(event)">
+            삭제
+          </a>
+          <a href="#" class="move" onclick="redirectToFAQ()">바로가기</a>
+        </div>
+      </div>
+      <button class="detail_toggle_button" onclick="toggleDetail(event)">
+        <img src="/img/expand_detail.svg" />
+      </button>
+    </li>
+    <li class="accounut_notification notification_container">
+      <img class="notification_icon" src="/img/account_notification_icon.svg" />
+      <div class="content">
+        <div class="info_box">
+          <span class="notification_type">개인정보 알림</span>
+          <span class="notification_date">2023.12.02 14:22</span>
+        </div>
+        <div class="notification_title">제목</div>
+        <p class="notification_content hidden">
+          상세 내용 .... <br /><br /><br /><br />
+        </p>
+        <div class="links">
+          <a href="#" class="delete" onclick="deleteNotification(event)">
+            삭제
+          </a>
+          <a href="#" class="move" onclick="redirectToMypage()">바로가기</a>
+        </div>
+      </div>
+      <button class="detail_toggle_button" onclick="toggleDetail(event)">
+        <img src="/img/expand_detail.svg" />
+      </button>
+    </li>
+    <li class="store_product_notification notification_container">
+      <img
+        class="notification_icon"
+        src="/img/store_product_notification_icon.svg"
+      />
+      <div class="content">
+        <div class="info_box">
+          <span class="notification_type">매장 및 상품 알림</span>
+          <span class="notification_date">2023.12.02 14:22</span>
+        </div>
+        <div class="notification_title">제목</div>
+        <p class="notification_content hidden">
+          상세 내용 .... <br /><br /><br /><br />
+        </p>
+        <div class="links">
+          <a href="#" class="delete" onclick="deleteNotification(event)">
+            삭제
+          </a>
+          <a href="#" class="move" onclick="redirectToStoreDetailPage()">
+            바로가기
+          </a>
+        </div>
+      </div>
+      <button class="detail_toggle_button" onclick="toggleDetail(event)">
+        <img src="/img/expand_detail.svg" />
+      </button>
+    </li>
+    <li class="support_notification notification_container">
+      <img class="notification_icon" src="/img/support_notification_icon.svg" />
+      <div class="content">
+        <div class="info_box">
+          <span class="notification_type">사용자 지원 알림</span>
+          <span class="notification_date">2023.12.02 14:22</span>
+        </div>
+        <div class="notification_title">제목</div>
+        <p class="notification_content hidden">
+          상세 내용 .... <br /><br /><br /><br />
+        </p>
+        <div class="links">
+          <a href="#" class="delete" onclick="deleteNotification(event)">
+            삭제
+          </a>
+          <a href="#" class="move" onclick="redirectToFAQ()">바로가기</a>
+        </div>
+      </div>
+      <button class="detail_toggle_button" onclick="toggleDetail(event)">
+        <img src="/img/expand_detail.svg" />
+      </button>
+    </li>
+    <li class="accounut_notification notification_container">
+      <img class="notification_icon" src="/img/account_notification_icon.svg" />
+      <div class="content">
+        <div class="info_box">
+          <span class="notification_type">개인정보 알림</span>
+          <span class="notification_date">2023.12.02 14:22</span>
+        </div>
+        <div class="notification_title">제목</div>
+        <p class="notification_content hidden">
+          상세 내용 .... <br /><br /><br /><br />
+        </p>
+        <div class="links">
+          <a href="#" class="delete" onclick="deleteNotification(event)">
+            삭제
+          </a>
+          <a href="#" class="move" onclick="redirectToMypage()">바로가기</a>
+        </div>
+      </div>
+      <button class="detail_toggle_button" onclick="toggleDetail(event)">
+        <img src="/img/expand_detail.svg" />
+      </button>
+    </li>
+    <li class="store_product_notification notification_container">
+      <img
+        class="notification_icon"
+        src="/img/store_product_notification_icon.svg"
+      />
+      <div class="content">
+        <div class="info_box">
+          <span class="notification_type">매장 및 상품 알림</span>
+          <span class="notification_date">2023.12.02 14:22</span>
+        </div>
+        <div class="notification_title">제목</div>
+        <p class="notification_content hidden">
+          상세 내용 .... <br /><br /><br /><br />
+        </p>
+        <div class="links">
+          <a href="#" class="delete" onclick="deleteNotification(event)">
+            삭제
+          </a>
+          <a href="#" class="move" onclick="redirectToStoreDetailPage()">
+            바로가기
+          </a>
+        </div>
+      </div>
+      <button class="detail_toggle_button" onclick="toggleDetail(event)">
+        <img src="/img/expand_detail.svg" />
+      </button>
+    </li>
+    <li class="support_notification notification_container">
+      <img class="notification_icon" src="/img/support_notification_icon.svg" />
+      <div class="content">
+        <div class="info_box">
+          <span class="notification_type">사용자 지원 알림</span>
+          <span class="notification_date">2023.12.02 14:22</span>
+        </div>
+        <div class="notification_title">제목</div>
+        <p class="notification_content hidden">
+          상세 내용 .... <br /><br /><br /><br />
+        </p>
+        <div class="links">
+          <a href="#" class="delete" onclick="deleteNotification(event)">
+            삭제
+          </a>
+          <a href="#" class="move" onclick="redirectToFAQ()">바로가기</a>
+        </div>
+      </div>
+      <button class="detail_toggle_button" onclick="toggleDetail(event)">
+        <img src="/img/expand_detail.svg" />
+      </button>
+    </li>
+    <li class="accounut_notification notification_container">
+      <img class="notification_icon" src="/img/account_notification_icon.svg" />
+      <div class="content">
+        <div class="info_box">
+          <span class="notification_type">개인정보 알림</span>
+          <span class="notification_date">2023.12.02 14:22</span>
+        </div>
+        <div class="notification_title">제목</div>
+        <p class="notification_content hidden">
+          상세 내용 .... <br /><br /><br /><br />
+        </p>
+        <div class="links">
+          <a href="#" class="delete" onclick="deleteNotification(event)">
+            삭제
+          </a>
+          <a href="#" class="move" onclick="redirectToMypage()">바로가기</a>
+        </div>
+      </div>
+      <button class="detail_toggle_button" onclick="toggleDetail(event)">
+        <img src="/img/expand_detail.svg" />
+      </button>
+    </li>
+    <li class="store_product_notification notification_container">
+      <img
+        class="notification_icon"
+        src="/img/store_product_notification_icon.svg"
+      />
+      <div class="content">
+        <div class="info_box">
+          <span class="notification_type">매장 및 상품 알림</span>
+          <span class="notification_date">2023.12.02 14:22</span>
+        </div>
+        <div class="notification_title">제목</div>
+        <p class="notification_content hidden">
+          상세 내용 .... <br /><br /><br /><br />
+        </p>
+        <div class="links">
+          <a href="#" class="delete" onclick="deleteNotification(event)">
+            삭제
+          </a>
+          <a href="#" class="move" onclick="redirectToStoreDetailPage()">
+            바로가기
+          </a>
+        </div>
+      </div>
+      <button class="detail_toggle_button" onclick="toggleDetail(event)">
+        <img src="/img/expand_detail.svg" />
+      </button>
+    </li>
+    <li class="support_notification notification_container">
+      <img class="notification_icon" src="/img/support_notification_icon.svg" />
+      <div class="content">
+        <div class="info_box">
+          <span class="notification_type">사용자 지원 알림</span>
+          <span class="notification_date">2023.12.02 14:22</span>
+        </div>
+        <div class="notification_title">제목</div>
+        <p class="notification_content hidden">
+          상세 내용 .... <br /><br /><br /><br />
+        </p>
+        <div class="links">
+          <a href="#" class="delete" onclick="deleteNotification(event)">
+            삭제
+          </a>
+          <a href="#" class="move" onclick="redirectToFAQ()">바로가기</a>
+        </div>
+      </div>
+      <button class="detail_toggle_button" onclick="toggleDetail(event)">
+        <img src="/img/expand_detail.svg" />
+      </button>
+    </li>
+    <li class="accounut_notification notification_container">
+      <img class="notification_icon" src="/img/account_notification_icon.svg" />
+      <div class="content">
+        <div class="info_box">
+          <span class="notification_type">개인정보 알림</span>
+          <span class="notification_date">2023.12.02 14:22</span>
+        </div>
+        <div class="notification_title">제목</div>
+        <p class="notification_content hidden">
+          상세 내용 .... <br /><br /><br /><br />
+        </p>
+        <div class="links">
+          <a href="#" class="delete" onclick="deleteNotification(event)">
+            삭제
+          </a>
+          <a href="#" class="move" onclick="redirectToMypage()">바로가기</a>
+        </div>
+      </div>
+      <button class="detail_toggle_button" onclick="toggleDetail(event)">
+        <img src="/img/expand_detail.svg" />
+      </button>
+    </li>
+    <li class="store_product_notification notification_container">
+      <img
+        class="notification_icon"
+        src="/img/store_product_notification_icon.svg"
+      />
+      <div class="content">
+        <div class="info_box">
+          <span class="notification_type">매장 및 상품 알림</span>
+          <span class="notification_date">2023.12.02 14:22</span>
+        </div>
+        <div class="notification_title">제목</div>
+        <p class="notification_content hidden">
+          상세 내용 .... <br /><br /><br /><br />
+        </p>
+        <div class="links">
+          <a href="#" class="delete" onclick="deleteNotification(event)">
+            삭제
+          </a>
+          <a href="#" class="move" onclick="redirectToStoreDetailPage()">
+            바로가기
+          </a>
+        </div>
+      </div>
+      <button class="detail_toggle_button" onclick="toggleDetail(event)">
+        <img src="/img/expand_detail.svg" />
+      </button>
+    </li>
+    <li class="support_notification notification_container">
+      <img class="notification_icon" src="/img/support_notification_icon.svg" />
+      <div class="content">
+        <div class="info_box">
+          <span class="notification_type">사용자 지원 알림</span>
+          <span class="notification_date">2023.12.02 14:22</span>
+        </div>
+        <div class="notification_title">제목</div>
+        <p class="notification_content hidden">
+          상세 내용 .... <br /><br /><br /><br />
+        </p>
+        <div class="links">
+          <a href="#" class="delete" onclick="deleteNotification(event)">
+            삭제
+          </a>
+          <a href="#" class="move" onclick="redirectToFAQ()">바로가기</a>
+        </div>
+      </div>
+      <button class="detail_toggle_button" onclick="toggleDetail(event)">
+        <img src="/img/expand_detail.svg" />
+      </button>
+    </li>
+    <li class="accounut_notification notification_container">
+      <img class="notification_icon" src="/img/account_notification_icon.svg" />
+      <div class="content">
+        <div class="info_box">
+          <span class="notification_type">개인정보 알림</span>
+          <span class="notification_date">2023.12.02 14:22</span>
+        </div>
+        <div class="notification_title">제목</div>
+        <p class="notification_content hidden">
+          상세 내용 .... <br /><br /><br /><br />
+        </p>
+        <div class="links">
+          <a href="#" class="delete" onclick="deleteNotification(event)">
+            삭제
+          </a>
+          <a href="#" class="move" onclick="redirectToMypage()">바로가기</a>
+        </div>
+      </div>
+      <button class="detail_toggle_button" onclick="toggleDetail(event)">
+        <img src="/img/expand_detail.svg" />
+      </button>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 페이지</title>
+
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/signup.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <style>
+      section {
+        background-image: url("/img/background.png");
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* 전체 화면 높이 */
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <div class="top">
+        <div class="logo_container">
+          <img src="../img/logo.svg" alt="logo SVG" />
+          <h1 class="text">리필맵</h1>
+        </div>
+        <ul class="menu_list">
+          <li class="contract">
+            <a href="#"
+              ><img src="../img/nav-arrow-left.svg" /><span>줄이기</span></a
+            >
+          </li>
+          <li class="homepage">
+            <a href="#"
+              ><img src="../img/home-icon.svg" /><span>홈화면</span></a
+            >
+          </li>
+          <li class="search">
+            <a href="#"
+              ><img src="../img/search-icon.svg" /><span>검색하기</span></a
+            >
+          </li>
+          <li class="notification">
+            <a href="#"
+              ><img src="../img/notification-icon.svg" /><span
+                >알림 확인</span
+              ></a
+            >
+          </li>
+          <li class="favorites">
+            <a href="#"
+              ><img src="../img/favorites-icon.svg" /><span>즐겨찾기</span></a
+            >
+          </li>
+          <li class="mypage">
+            <a href="#"
+              ><img src="../img/mypage-icon.svg" /><span>마이페이지</span></a
+            >
+          </li>
+          <li class="support">
+            <a href="#"
+              ><img src="../img/support-icon.svg" /><span>지원센터</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <ul class="menu_list">
+          <li class="profile">
+            <img src="../img/profile-avatar.png" />
+            <span class="nickname">닉네임</span>
+          </li>
+          <li class="logout">
+            <a href="#"
+              ><img src="../img/logout-icon.svg" /><span>Logout</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section>
+      <article id="signup_form">
+        <div class="title">회원가입</div>
+        <div class="email">
+          <div>
+            <span class="description">*이메일</span>
+            <label>
+              <img class="icon" src="/img/email_icon.svg" />
+              <input type="email" placeholder="이메일을 입력해 주세요" />
+            </label>
+          </div>
+          <button>인증번호 받기</button>
+        </div>
+        <div class="certification">
+          <span class="description">*인증번호</span>
+          <input type="email" placeholder="인증번호 입력" />
+        </div>
+        <div class="nickname">
+          <span class="description">*닉네임</span>
+          <label>
+            <img class="icon" src="/img/user_icon.svg" />
+            <input type="email" placeholder="이름을 입력해 주세요" />
+          </label>
+        </div>
+        <div class="password">
+          <span class="description">*비밀번호</span>
+          <label>
+            <img class="icon" src="/img/password_icon.svg" />
+            <input type="email" placeholder="비밀번호를 입력해 주세요" />
+          </label>
+        </div>
+        <div class="confirm_password">
+          <span class="description">*비밀번호 확인</span>
+          <label>
+            <img class="icon" src="/img/password_icon.svg" />
+            <input type="email" placeholder="비밀번호를 입력해 주세요" />
+          </label>
+        </div>
+        <button class="signup_button" onclick="redirectToLogin()">
+          회원가입
+        </button>
+      </article>
+    </section>
+    <footer>
+      <ul class="menu">
+        <li><a href="homepage.html">홈화면</a></li>
+        <li><a href="mypage.html">이용약관</a></li>
+        <li><a href="FAQ.html">문의하기</a></li>
+        <li><a href="https://github.com/kjh601" target="_blank">깃허브</a></li>
+      </ul>
+      <span>© 2023 리필스테이션 | Powered by 리필스테이션</span>
+    </footer>
+    <script src="/scripts/header.js"></script>
+    <script src="/scripts/login.js"></script>
+  </body>
+</html>

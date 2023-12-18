@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>매장상세페이지</title>
+    <link rel="stylesheet" href="/css/store-detail-page.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="top">
+        <div class="logo_container">
+          <img src="../img/logo.svg" alt="logo SVG" />
+          <h1 class="text">리필맵</h1>
+        </div>
+        <ul class="menu_list">
+          <li class="contract">
+            <a href="#"
+              ><img src="../img/nav-arrow-left.svg" /><span>줄이기</span></a
+            >
+          </li>
+          <li class="homepage">
+            <a href="#"
+              ><img src="../img/home-icon.svg" /><span>홈화면</span></a
+            >
+          </li>
+          <li class="search">
+            <a href="#"
+              ><img src="../img/search-icon.svg" /><span>검색하기</span></a
+            >
+          </li>
+          <li class="notification">
+            <a href="#"
+              ><img src="../img/notification-icon.svg" /><span
+                >알림 확인</span
+              ></a
+            >
+          </li>
+          <li class="favorites">
+            <a href="#"
+              ><img src="../img/favorites-icon.svg" /><span>즐겨찾기</span></a
+            >
+          </li>
+          <li class="mypage">
+            <a href="#"
+              ><img src="../img/mypage-icon.svg" /><span>마이페이지</span></a
+            >
+          </li>
+          <li class="support">
+            <a href="#"
+              ><img src="../img/support-icon.svg" /><span>지원센터</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <ul class="menu_list">
+          <li class="profile">
+            <img src="../img/profile-avatar.png" />
+            <span class="nickname">닉네임</span>
+          </li>
+          <li class="logout">
+            <a href="#"
+              ><img src="../img/logout-icon.svg" /><span>Logout</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section class="store_detail_page">
+      <article class="title">
+        <span class="text">지구샵X민달팽이주택협동조합 독산역점</span>
+        <button class="favorite_button" onclick="toggleFavorite()">
+          <img id="favoriteIcon" src="../img/star_outline.svg" />
+        </button>
+      </article>
+      <article class="store_info">
+        <img class="store_image" src="../img/detail_store_image.png" />
+        <div class="detail_info">
+          <div class="store_status">
+            <div class="open">영업 중</div>
+            <div class="carbon_point">탄소포인트 참여</div>
+            <div class="personal_bottle">개인용기 가능</div>
+          </div>
+          <div class="phone_number">
+            <span class="key">전화번호 : </span
+            ><span class="value">02-XXXX-XXXX</span>
+          </div>
+          <ul class="schedule">
+            <li class="key">운영시간</li>
+            <li class="월 value">월 : 정기휴무 (매주 월요일)</li>
+            <li class="화 value">화 : 정기휴무 (매주 화요일)</li>
+            <li class="수 value">수 : 11:00 - 18:30</li>
+            <li class="목 value">목 : 11:00 - 18:30</li>
+            <li class="금 value">금 : 11:00 - 18:30</li>
+            <li class="토 value">토 : 11:00 - 18:30</li>
+            <li class="일 value">일 : 11:00 - 18:30</li>
+          </ul>
+          <div class="address">
+            <span class="key">주소:</span>
+            <span class="value">서울특별시 금천구 범안로11길 45</span>
+          </div>
+          <div class="links">
+            <span class="key">링크:</span>
+            <img class="value" src="/img/facebook_icon.png" />
+            <img class="value" src="/img/twitter_icon.png" />
+            <img class="value" src="/img/instagram_icon.png" />
+          </div>
+          <div class="buttons">
+            <button class="direction" onclick="openNavigationPage()">
+              길찾기
+            </button>
+            <button class="move_map" onclick="redirectToHomepage()">
+              지도에서 보기
+            </button>
+          </div>
+        </div>
+      </article>
+      <article class="introduction">
+        우리는 단순한 매장을 넘어서,<br />
+        고객 여러분의 일상에 새로운 가치와 편리함을 제공하려 노력하는
+        공간입니다.<br />
+        당신의 각종 필요와 요구를 충족시켜 줄 특별한 제품들,<br />
+        그리고 그 아래 숨겨진 우리의 철학이 함께 담겨 있습니다.
+      </article>
+      <article class="sale_product">
+        <header>판매상품</header>
+        <div class="products">
+          <!-- 상품 종류 카테고리, 체크박스 -->
+          <div class="product_type">
+            <label class="checked_product_type">
+              <input
+                type="radio"
+                name="product_type"
+                onclick="updateCheckedLabel(this.parentElement)"
+              />
+              <span class="text">전체</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="product_type"
+                onclick="updateCheckedLabel(this.parentElement)"
+              />
+              <span class="text">이미용품</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="product_type"
+                onclick="updateCheckedLabel(this.parentElement)"
+              />
+              <span class="text">가사용품</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="product_type"
+                onclick="updateCheckedLabel(this.parentElement)"
+              />
+              <span class="text">식료품</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="product_type"
+                onclick="updateCheckedLabel(this.parentElement)"
+              />
+              <span class="text">화장품</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="product_type"
+                onclick="updateCheckedLabel(this.parentElement)"
+              />
+              <span class="text">기타</span>
+            </label>
+          </div>
+          <ul class="product_list">
+            <li class="product_item" onclick="redirectToProductDetailPage()">
+              <img class="product_img" src="/img/bottle.png" />
+              <div class="product_info">
+                <span class="product_name">리필 전용용기</span>
+                <span class="product_introduction">
+                  친환경 소재와 훌륭한 내구성으로 만들어진 용기
+                </span>
+                <span class="price">3,000원/1개</span>
+              </div>
+            </li>
+            <li class="product_item" onclick="redirectToProductDetailPage()">
+              <img class="product_img" src="/img/walnut.png" />
+              <div class="product_info">
+                <span class="product_name">신선한 호두</span>
+                <span class="product_introduction"> 고소하고 건강한 호두 </span>
+                <span class="price"> 1,400원/100g </span>
+              </div>
+            </li>
+            <li class="product_item" onclick="redirectToProductDetailPage()">
+              <img class="product_img" src="/img/perfume.png" />
+              <div class="product_info">
+                <span class="product_name">우아한 향수</span>
+                <span class="product_introduction">
+                  우아하면서 부드러운 느낌을 주는 향수
+                </span>
+                <span class="price">13,000원/10ml</span>
+              </div>
+            </li>
+            <li class="product_item" onclick="redirectToProductDetailPage()">
+              <img class="product_img" src="/img/treatment_oil.png" />
+              <div class="product_info">
+                <span class="product_name">트리트먼트 오일</span>
+                <span class="product_introduction">
+                  모발을 건강하고 생기있게!
+                </span>
+                <span class="price">12,000원/100ml</span>
+              </div>
+            </li>
+          </ul>
+          <button class="move_left">
+            <img src="/img/nav-arrow-left.svg" />
+          </button>
+          <button class="move_right">
+            <img src="/img/nav-arrow-right.svg" />
+          </button>
+        </div>
+      </article>
+    </section>
+    <footer>
+      <ul class="menu">
+        <li><a href="homepage.html">홈화면</a></li>
+        <li><a href="mypage.html">이용약관</a></li>
+        <li><a href="FAQ.html">문의하기</a></li>
+        <li><a href="https://github.com/kjh601" target="_blank">깃허브</a></li>
+      </ul>
+      <span>© 2023 리필스테이션 | Powered by 리필스테이션</span>
+    </footer>
+    <script src="/scripts/store-detail-page.js"></script>
+    <script src="../scripts/header.js"></script>
+  </body>
+</html>

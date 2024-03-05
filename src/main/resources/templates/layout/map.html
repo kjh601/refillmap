@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/homepage.css" />
+    <link rel="stylesheet" href="css/overlay.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>리필맵</title>
+</head>
+<body>
+<div class="header-menu-container">
+    <header id="header">
+    </header>
+    <div id="contents_container"></div>
+    <button
+            type="button"
+            class="contentsToggleButton"
+            onclick="toggleContentsContainer()"
+    >
+        <img src="/img/nav-arrow-left.svg" style="filter: brightness(100)" />
+    </button>
+</div>
+<section id="map"></section>
+<script
+        type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f0c55430bc3e94a2af025d88a13f0d24&libraries=services,clusterer">
+</script>
+<script src="scripts/map.js"></script>
+<script src="scripts/header.js"></script>
+</body>
+</html>

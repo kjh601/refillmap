@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout/page :: layout(~{::title}, ~{::link}, ~{::section}, ~{::script})">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문의하기</title>
+
+    <link rel="stylesheet" href="/css/inquire.css" />
+  </head>
+  <body>
+    <section>
+      <article id="inquire">
+        <div class="title">문의하기</div>
+        <div class="question_type">
+          <div class="text">질문 유형</div>
+          <div class="type_list">
+            <label class="checked_question_type">
+              <input
+                type="radio"
+                name="question_type"
+                onclick="updateCheckedLabel(this.parentElement)"
+              />
+              <span class="text">회원 정보</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="question_type"
+                onclick="updateCheckedLabel(this.parentElement)"
+              />
+              <span class="text">매장/상품</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="question_type"
+                onclick="updateCheckedLabel(this.parentElement)"
+              />
+              <span class="text">기능/서비스</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="question_type"
+                onclick="updateCheckedLabel(this.parentElement)"
+              />
+              <span class="text">기타</span>
+            </label>
+          </div>
+        </div>
+        <div class="question_content">
+          <div class="text">내용</div>
+          <textarea></textarea>
+        </div>
+        <div class="upload_img">
+          <div class="text">파일 첨부</div>
+          <label class="upload_button">
+            <img src="/img/camera.svg" />
+            <input type="file" style="display: none" />
+          </label>
+        </div>
+        <input
+          type="submit"
+          class="inquire_button"
+          value="문의하기"
+          onclick="redirectToMyQuestion()"
+        />
+      </article>
+    </section>
+    <script src="/scripts/inquire.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout/page :: layout(~{::title}, ~{::link}, ~{::section}, ~{::script})">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인페이지</title>
+
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+  <body>
+    <section>
+      <article id="login_form">
+        <div class="title">로그인</div>
+        <div class="content">
+          <div class="input_text">
+            <div class="email">
+              <span class="description">이메일</span>
+              <label>
+                <img class="icon" src="/img/email_icon.svg" />
+                <input type="email" placeholder="이메일을 입력해 주세요" />
+              </label>
+            </div>
+            <div class="password">
+              <span class="description">비밀번호</span>
+              <label>
+                <img class="icon" src="/img/password_icon.svg" />
+                <input type="password" placeholder="비밀번호를 입력해 주세요" />
+              </label>
+            </div>
+          </div>
+          <div class="login_addon">
+            <label class="autologin">
+              <input type="checkbox" name="autologin" />자동 로그인
+            </label>
+            <div>
+              <a href="#" onclick="redirectToTempPassword()">비밀번호 찾기</a>
+              <a href="#" onclick="redirectToSignup()">회원가입</a>
+            </div>
+          </div>
+          <button class="login_button" onclick="loginButton()">로그인</button>
+        </div>
+        <div class="sns">
+          <span class="title">소셜 로그인</span>
+          <ul class="sns_list">
+            <li><img class="naver" src="/img/naver_logo.png" /></li>
+            <li><img class="kakao" src="/img/kakao_logo.png" /></li>
+            <li><img class="facebook" src="/img/facebook_logo.png" /></li>
+            <li><img class="apple" src="/img/apple_logo.png" /></li>
+            <li><img class="google" src="/img/google_logo.png" /></li>
+          </ul>
+        </div>
+      </article>
+    </section>
+    <script src="/scripts/login.js"></script>
+  </body>
+</html>

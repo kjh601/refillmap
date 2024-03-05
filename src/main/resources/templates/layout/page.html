@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      th:fragment="layout(title, links, section, scripts)"  >
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title th:replace="${title}"></title>
+
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+
+    <th:block th:replace="${links}"/>
+
+    <style>
+        section {
+            background-image: url("/img/background.png");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 전체 화면 높이 */
+        }
+    </style>
+</head>
+<body>
+<header id="header" th:replace="~{fragment/navigator/header :: header}">
+</header>
+<section th:replace="${section}">
+</section>
+<footer th:replace="~{fragment/footer :: footer}">
+</footer>
+<script src="/scripts/header.js"></script>
+<script src="/scripts/mypage.js"></script>
+<th:block th:replace="${scripts}"/>
+</body>
+</html>

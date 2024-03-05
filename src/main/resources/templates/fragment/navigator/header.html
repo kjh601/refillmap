@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header th:fragment="header" id="header" >
+    <div class="top">
+        <div class="logo_container">
+            <img src="img/logo.svg" alt="logo SVG" />
+            <h1 class="text">리필맵</h1>
+        </div>
+        <ul class="menu_list">
+            <li class="contract">
+                <a href="#"
+                ><img src="img/nav-arrow-left.svg" /><span>줄이기</span></a
+                >
+            </li>
+            <li class="homepage active">
+                <a href="#"
+                ><img src="img/home-icon.svg" /><span>홈화면</span></a
+                >
+            </li>
+            <li class="search">
+                <a href="#"
+                ><img src="img/search-icon.svg" /><span>검색하기</span></a
+                >
+            </li>
+            <li class="notification">
+                <a href="#">
+                    <img src="img/notification-icon.svg" />
+                    <span> 알림 확인 </span>
+                </a>
+            </li>
+            <li class="favorites">
+                <a href="#"
+                ><img src="img/favorites-icon.svg" /><span>즐겨찾기</span></a
+                >
+            </li>
+            <li class="mypage">
+                <a href="#"
+                ><img src="img/mypage-icon.svg" /><span>마이페이지</span></a
+                >
+            </li>
+            <li class="support">
+                <a href="#"
+                ><img src="img/support-icon.svg" /><span>지원센터</span></a
+                >
+            </li>
+        </ul>
+    </div>
+    <div class="bottom">
+        <ul class="menu_list">
+            <li class="profile">
+                <img src="img/profile-avatar.png" />
+                <span class="nickname">닉네임</span>
+            </li>
+            <li class="logout">
+                <a href="#"
+                ><img src="img/logout-icon.svg" /><span>Logout</span></a
+                >
+            </li>
+        </ul>
+    </div>
+</header>
+</body>
+</html>

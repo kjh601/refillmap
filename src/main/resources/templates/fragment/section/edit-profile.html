@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout/page :: layout(~{::title}, ~{::link}, ~{::section}, ~{::script})">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>프로필 수정</title>
+
+    <link rel="stylesheet" href="/css/edit_profile.css" />
+    <style>
+      section {
+        background-image: url("/img/background.png");
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* 전체 화면 높이 */
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <article id="edit_profile">
+        <div class="header">프로필 설정</div>
+        <div class="edit_profile_image">
+          <img src="/img/avatar.png" />
+          <div class="file-upload-container">
+            <div class="file-upload-option">
+              <label>
+                <input type="radio" name="uploadOption" checked /> 기존 프로필
+                이미지
+              </label>
+            </div>
+            <div class="file-upload-option">
+              <label>
+                <input type="radio" name="uploadOption" /> 기본 이미지로 변경
+              </label>
+            </div>
+            <div class="file-upload-option last-option">
+              <label>
+                <input type="radio" name="uploadOption" /> 사진 불러오기
+                (jpg,png)
+              </label>
+              <div class="upload-image">
+                <input type="text" readonly />
+                <button class="upload-btn">변경하기</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="edit_nickname">
+          <div class="title">닉네임</div>
+          <input type="text" />
+        </div>
+        <button class="save" onclick="redirectToMypage()">저장</button>
+      </article>
+    </section>
+    <script src="/scripts/edit_profile.js"></script>
+  </body>
+</html>

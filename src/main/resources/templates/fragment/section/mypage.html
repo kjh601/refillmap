@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout/page :: layout(~{::title}, ~{::link}, ~{::section}, ~{::script})">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마이페이지</title>
+
+    <link rel="stylesheet" href="/css/mypage.css" />
+  </head>
+  <body>
+    <section>
+      <article id="mypage">
+        <div class="header">마이페이지</div>
+        <div class="profile">
+          <div class="image">
+            <img src="/img/avatar.png" />
+            <div class="welcome_message">
+              <span class="nickname">김지환</span>님<br />
+              안녕하세요!
+            </div>
+          </div>
+          <div class="account">
+            <button class="edit_profile" onclick="redirectToEditProfile()">
+              프로필 수정
+            </button>
+            <button class="logout" onclick="redirectToLogin()">로그아웃</button>
+          </div>
+        </div>
+        <ul class="information_use">
+          <li class="title">이용안내</li>
+          <li><a href="faq.html">문의하기</a></li>
+          <li><a href="myquestion.html">문의 내역 확인</a></li>
+          <li><a href="privacy-policy.html">개인정보 처리 방침</a></li>
+          <li><a href="terms_of_service.html">서비스 이용약관</a></li>
+        </ul>
+        <ul class="etc_menu">
+          <li class="title">기타</li>
+          <li><a href="setting_alarm.html">알림 설정</a></li>
+          <li><a href="updatepassword.html">비밀번호 변경</a></li>
+          <li><a href="#" onclick="showModal()">회원 탈퇴</a></li>
+        </ul>
+        <div id="deleteConfirmModal" class="modal">
+          <div class="modal-content">
+            <div class="header">정말 탈퇴하시겠습니까?</div>
+            <div class="content">
+              탈퇴 버튼 선택 시, 계정은 삭제되며 복구되지 않습니다.
+            </div>
+            <button id="confirmDelete" onclick="confirmDelete()">탈퇴</button>
+            <button id="cancelDelete" onclick="closeModal()">취소</button>
+          </div>
+        </div>
+      </article>
+    </section>
+    <script src="/scripts/mypage.js"></script>
+  </body>
+</html>

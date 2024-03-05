@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ</title>
+
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/FAQ.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <style>
+      section {
+        background-image: url("/img/background.png");
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* 전체 화면 높이 */
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <div class="top">
+        <div class="logo_container">
+          <img src="../img/logo.svg" alt="logo SVG" />
+          <h1 class="text">리필맵</h1>
+        </div>
+        <ul class="menu_list">
+          <li class="contract">
+            <a href="#"
+              ><img src="../img/nav-arrow-left.svg" /><span>줄이기</span></a
+            >
+          </li>
+          <li class="homepage">
+            <a href="#"
+              ><img src="../img/home-icon.svg" /><span>홈화면</span></a
+            >
+          </li>
+          <li class="search">
+            <a href="#"
+              ><img src="../img/search-icon.svg" /><span>검색하기</span></a
+            >
+          </li>
+          <li class="notification">
+            <a href="#"
+              ><img src="../img/notification-icon.svg" /><span
+                >알림 확인</span
+              ></a
+            >
+          </li>
+          <li class="favorites">
+            <a href="#"
+              ><img src="../img/favorites-icon.svg" /><span>즐겨찾기</span></a
+            >
+          </li>
+          <li class="mypage">
+            <a href="#"
+              ><img src="../img/mypage-icon.svg" /><span>마이페이지</span></a
+            >
+          </li>
+          <li class="support active">
+            <a href="#"
+              ><img src="../img/support-icon.svg" /><span>지원센터</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <ul class="menu_list">
+          <li class="profile">
+            <img src="../img/profile-avatar.png" />
+            <span class="nickname">닉네임</span>
+          </li>
+          <li class="logout">
+            <a href="#"
+              ><img src="../img/logout-icon.svg" /><span>Logout</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section>
+      <article id="FAQ">
+        <div class="title">자주 묻는 질문</div>
+        <div class="content">
+          <div class="search_bar">
+            <img src="/img/search-icon.svg" />
+            <input type="text" placeholder="무엇을 도와드릴까요?" />
+          </div>
+          <div class="question_type">
+            <label class="checked_question_type">
+              <input
+                type="radio"
+                name="question_type"
+                onclick="updateCheckedLabel(this.parentElement)"
+              />
+              <span class="text">전체</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="question_type"
+                onclick="updateCheckedLabel(this.parentElement)"
+              />
+              <span class="text">회원 정보</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="question_type"
+                onclick="updateCheckedLabel(this.parentElement)"
+              />
+              <span class="text">매장/상품</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="question_type"
+                onclick="updateCheckedLabel(this.parentElement)"
+              />
+              <span class="text">기능/서비스</span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="question_type"
+                onclick="updateCheckedLabel(this.parentElement)"
+              />
+              <span class="text">기타</span>
+            </label>
+          </div>
+
+          <ul class="question_list">
+            <li class="header">
+              <span class="head_category">카테고리</span>
+              <span class="head_title">제목</span>
+            </li>
+            <!-- 기능/서비스 카테고리 -->
+            <li>
+              <div class="category">기능/서비스</div>
+              <div class="question">
+                <div class="question_title">
+                  리필 스테이션을 어떻게 찾을 수 있나요?
+                  <img
+                    src="/img/nav-arrow-right.svg"
+                    onclick="toggleQuestionContent(this)"
+                  />
+                </div>
+                <div class="question_content">
+                  사용자의 현재 위치를 활용하거나, 지역명 또는 주소를 검색하여
+                  주변의 리필 스테이션을 찾을 수 있습니다. 지도 상에 표시된 리필
+                  스테이션 아이콘을 클릭하면 해당 스테이션의 상세 정보를 확인할
+                  수 있습니다.
+                </div>
+              </div>
+            </li>
+
+            <!-- 매장/상품 카테고리 -->
+            <li>
+              <div class="category">매장/상품</div>
+              <div class="question">
+                <div class="question_title">
+                  매장별로 제공되는 상품이 다른가요?
+                  <img
+                    src="/img/nav-arrow-right.svg"
+                    onclick="toggleQuestionContent(this)"
+                  />
+                </div>
+                <div class="question_content">
+                  각 리필 스테이션마다 제공하는 상품의 종류가 다를 수 있습니다.
+                  매장별로 제공하는 상품 정보는 각 매장의 상세 페이지에서 확인할
+                  수 있습니다.
+                </div>
+              </div>
+            </li>
+
+            <!-- 회원정보 카테고리 -->
+            <li>
+              <div class="category">회원정보</div>
+              <div class="question">
+                <div class="question_title">
+                  회원 정보를 어떻게 변경하나요?
+                  <img
+                    src="/img/nav-arrow-right.svg"
+                    onclick="toggleQuestionContent(this)"
+                  />
+                </div>
+                <div class="question_content">
+                  로그인 후, '내 정보' 섹션에서 개인 정보를 업데이트할 수
+                  있습니다. 이메일 주소, 연락처, 비밀번호 등을 변경할 수
+                  있습니다.
+                </div>
+              </div>
+            </li>
+
+            <!-- 기타 카테고리 -->
+            <li>
+              <div class="category">기타</div>
+              <div class="question">
+                <div class="question_title">
+                  리필 스테이션에 대한 피드백은 어떻게 제공하나요?
+                  <img
+                    src="/img/nav-arrow-right.svg"
+                    onclick="toggleQuestionContent(this)"
+                  />
+                </div>
+                <div class="question_content">
+                  피드백은 웹사이트 하단에 있는 '연락하기' 링크를 통해 접수할 수
+                  있습니다. 사용자의 의견은 서비스 개선에 중요한 역할을 합니다.
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <ul class="paging">
+          <li><img src="/img/double_arrow_left.svg" /></li>
+          <li><img src="/img/nav-arrow-left.svg" /></li>
+          <li>1</li>
+          <li>2</li>
+          <li class="now_page">3</li>
+          <li>4</li>
+          <li>5</li>
+          <li><img src="/img/nav-arrow-right.svg" /></li>
+          <li><img src="/img/double_arrow_right.svg" /></li>
+        </ul>
+        <button class="inquire" onclick="redirectToInquire()">문의하기</button>
+      </article>
+    </section>
+    <footer>
+      <ul class="menu">
+        <li><a href="homepage.html">홈화면</a></li>
+        <li><a href="mypage.html">이용약관</a></li>
+        <li><a href="FAQ.html">문의하기</a></li>
+        <li><a href="https://github.com/kjh601" target="_blank">깃허브</a></li>
+      </ul>
+      <span>© 2023 리필스테이션 | Powered by 리필스테이션</span>
+    </footer>
+    <script src="/scripts/header.js"></script>
+    <script src="/scripts/FAQ.js"></script>
+  </body>
+</html>

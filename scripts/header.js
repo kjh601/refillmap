@@ -1,11 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // "홈화면" 메뉴 항목을 찾아 'active' 클래스 추가
-  const homeMenuItem = document.querySelector(".menu_list .homepage");
-  if (homeMenuItem) {
-    homeMenuItem.classList.add("active");
-  }
-});
-
 const sidebar = document.querySelector(".contract a");
 
 sidebar.addEventListener("click", toggle_sidebar);
@@ -58,21 +50,15 @@ function is_sidebar_expand() {
   return firstChild.className == "expand";
 }
 
-let currentContentUrl = "";
-
 function loadContent(url) {
-  if (currentContentUrl === url) {
-    return;
-  }
-
-  if (window.location.pathname.split("/").pop() != "homepage.html") {
+  currentLocation = window.location.pathname.split("/").pop();
+  if (currentLocation == "homepage.html" || currentLocation == "") {
+    loadContentNow(url);
+  } else {
     // 현재 페이지가 'homepage.html'이 아닌 경우, localStorage에 정보 저장
     localStorage.setItem("loadAfterRedirect", true);
     localStorage.setItem("redirectUrl", url);
     window.location.href = "homepage.html";
-  } else {
-    currentContentUrl = url;
-    loadContentNow(url);
   }
 }
 

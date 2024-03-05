@@ -52,13 +52,13 @@ function is_sidebar_expand() {
 
 function loadContent(url) {
   currentLocation = window.location.pathname.split("/").pop();
-  if (currentLocation == "homepage.html" || currentLocation == "") {
+  if (currentLocation == "index.html" || currentLocation == "") {
     loadContentNow(url);
   } else {
-    // 현재 페이지가 'homepage.html'이 아닌 경우, localStorage에 정보 저장
+    // 현재 페이지가 'index.html'이 아닌 경우, localStorage에 정보 저장
     localStorage.setItem("loadAfterRedirect", true);
     localStorage.setItem("redirectUrl", url);
-    window.location.href = "homepage.html";
+    window.location.href = "index.html";
   }
 }
 
@@ -138,7 +138,7 @@ document.querySelector(".mypage").addEventListener("click", function (event) {
 // 지원센터 버튼에 이벤트 추가
 document.querySelector(".support").addEventListener("click", function (event) {
   event.preventDefault(); // 기본 동작을 방지합니다
-  window.location.href = "FAQ.html";
+  window.location.href = "faq.html";
 });
 
 // 로그아웃 버튼에 이벤트 추가

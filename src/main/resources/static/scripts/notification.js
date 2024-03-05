@@ -36,5 +36,5 @@ function redirectToMypage() {
 }
 
 function redirectToFAQ() {
-  window.location.href = "FAQ.html";
+  window.location.href = "faq.html";
 }
